@@ -286,7 +286,7 @@ ul.list5 li:last-child{background-image:none;color:#6c6c6c;}
 .textboxholder p{padding-bottom:10px;}
 .textarea1{background:#fff;border:1px solid #d4b12d;height:78px;/*width:282px;*/width:93.23%;font:normal 12px Arial, Helvetica, sans-serif;color:#000000;margin:0px 0px 18px 0px;padding:10px 10px;resize:none;overflow-y:hidden;}
 .textboxholder .submit_btn{width:91px;height:53px;background:url(../images/submit_btn.jpg) no-repeat;font-size:0px;cursor:pointer;}
-.map_sec iframe{width:100%;height:305px;}
+.map_sec iframe{width:100%;height:405px;}
 
 @media(max-width:1245px){
 .courses_left{font-size:15px;}	
