@@ -1,0 +1,79 @@
+.accordion_example2{margin-bottom:28px;}
+
+.smk_accordion{
+	position: relative;
+	margin-bottom: 20px;
+}
+.smk_accordion .accordion_in{ 
+	
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+}
+
+/* Head */
+.smk_accordion .accordion_in .acc_head{
+	position: relative;
+	display: block;
+	cursor: pointer; margin-bottom:3px;
+}
+
+.smk_accordion .accordion_in .acc_head h2{font:normal 16px 'open_sansregular';color:#ad8b0c;margin:0px;padding:8px 48px 8px 18px;border:1px solid #d4b12d;line-height:normal;}
+.smk_accordion .acc_active .acc_head{margin-bottom:0px;}
+.smk_accordion .acc_active .acc_head h2{border-bottom:2px solid #fff;}
+.acc_content h2{background:#07a189;margin:0px 15px;font:normal 32px 'timeburnerregular';color:#ffffff;text-transform:uppercase;text-align:center;line-height:47px;}
+.acc_content ul.list1 li:last-child{background:url(../images/right.jpg) no-repeat left 6px;color:#6b6b6b;}
+.acc_content ul.list3 li{color:#000;}
+.acc_content .video_holder{float:none;margin-left:0px;}
+.smk_accordion .accordion_in:first-of-type,
+.smk_accordion .accordion_in:first-of-type .acc_head{
+}
+.smk_accordion .accordion_in:last-of-type,
+.smk_accordion .accordion_in:last-of-type .acc_content{
+	border-radius: 0 0 3px 3px;
+}
+
+/* Content */
+.smk_accordion .accordion_in .acc_content{
+	border:1px solid #d4b12d;padding:13px 25px 10px 18px;
+}
+.acc_content h3{font-size:16px;padding-bottom:0px;}
+.acc_content h3 span{color:#6c6c6c;}
+
+.smk_accordion .accordion_in .acc_content p{text-align:left;}
+.smk_accordion .accordion_in h1:first-of-type,
+.smk_accordion .accordion_in h2:first-of-type,
+.smk_accordion .accordion_in h3:first-of-type,
+.smk_accordion .accordion_in h4:first-of-type,
+.smk_accordion .accordion_in h5:first-of-type,
+.smk_accordion .accordion_in h6:first-of-type
+{
+	margin-top: 5px;
+}
+
+
+/* Icon expand */
+.smk_accordion .accordion_in .acc_head .acc_icon_expand{
+	display: block;
+	width: 16px;
+	height: 10px;
+	position: absolute;
+	right: 14px;
+	top: 20px;
+	margin-top: -9px;
+	background: url(../images/plusminus.png) center 0;
+}
+.smk_accordion .accordion_in.acc_active .acc_head .acc_icon_expand{
+	background: url(../images/plusminus.png) center -49px;
+}
+
+/* JS requires */
+.smk_accordion .accordion_in.acc_active .acc_content{ 
+	display: block;
+}
+.smk_accordion .accordion_in.acc_active .acc_head{
+	
+}
+.smk_accordion.acc_with_icon .accordion_in .acc_head,
+.smk_accordion.acc_with_icon .accordion_in .acc_content{
+}
