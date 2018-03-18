@@ -368,5 +368,6 @@ ul.list1{clear:both;}
 #footer h6{font:normal 12px Arial, Helvetica, sans-serif;color:#f8ecbf;margin:0px;padding:0px 10px;line-height:normal;}
 #footer h6 span{display:block;font-size:14px;padding-bottom:10px;}
 
-
-
+.h2-design {
+    color:#ac8b0b;
+}
