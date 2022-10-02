@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="format-detection" content="telephone=no" />
 <title>GMCKS Lightworkers</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="css/meanmenu.css" media="all" />
 <script src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery.meanmenu.js"></script> 
+    <script type="text/javascript" src="js/template.js"></script>  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <script type="text/javascript" >
 jQuery(document).ready(function () {
     jQuery('nav').meanmenu();
@@ -221,7 +222,7 @@ ddsmoothmenu.init({
 <!--CONTAINER END -->
 <script src="js/wow.js"></script>
   <script>
-      $("#footer").load("footer.html");       $(".main-header").load("header.html");       $("#contact-us").load("contact.html");   $('#highlight-upcoming').load("upcoming_courses_highlight.html");
+      $("#footer").load("footer.html");       $(".main-header").load("header.html");       $("#contact-us").load("contact.html");   template.hightLightCourse();
     wow = new WOW(
       {
         animateClass: 'animated',

@@ -4,7 +4,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="google-site-verification" content="8iil9GM9vVT28rGxNVT6a55Dk-y-18DoghSdGk-sTpM" />
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="format-detection" content="telephone=no" />
 <title>GMCKS Lightworkers</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -12,15 +16,17 @@
 	<link rel="stylesheet" type="text/css" href="css/ie8-and-down.css" />
     <script src="js/jquery-1.9.1.js"></script>
 <![endif]-->
- 
- 
+
+
 <!--[if ! lt IE 9]><!-->
 <!--Menu Start -->
 <link rel="stylesheet" href="css/meanmenu.css" media="all" />
 <link rel="stylesheet" href="css/table.css" type="text/css" media="all">
 <script src="js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="js/jquery.meanmenu.js"></script> 
-<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/jquery.meanmenu.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/template.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <script type="text/javascript" >
 jQuery(document).ready(function () {
     jQuery('nav').meanmenu();
@@ -28,7 +34,7 @@ jQuery(document).ready(function () {
 </script>
 <!--Menu End -->
  <!--<![endif]-->
- 
+
 <!--dropdown start -->
 <script type="text/javascript">
 if (screen && screen.width > 767)
@@ -51,7 +57,7 @@ ddsmoothmenu.init({
 <link rel="stylesheet" href="css/animate.css">
 <script type="text/javascript" src="js/form.js"></script>
 </head>
-<body>
+<body oncontextmenu="return false;">
 <!--CONTAINER START -->
 <div id="container">
 	<!--WRAPPER START -->
@@ -129,17 +135,42 @@ ddsmoothmenu.init({
         <div id="content">
         	<div class="left_panel">
             	<h1>What is Pranic Healing ?</h1>
-                
+
                 <div class="video_holder"></div>
                 <div class="clear wow fadeInDown">
-                <ul class="list1">
-                	<li>Highly evolved and tested “no-touch”, “no-drug” system of energy Healing</li>
-                    <li>Based  on  natural laws that utilize  “Prana” or “Life force” to accelerate natural healing of our body</li>
-                    <li>Practiced  in more than 100 countries of diverse cultural and religious backgrounds and by people of different professions.</li>
-                    <li>It can effectively be applied in all the four aspects of our lives - health, relationship, prosperity and spirituality</li>
-                </ul>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <ul class="list1">
+                                <li>Highly evolved and tested “no-touch”, “no-drug” system of energy Healing</li>
+                                <li>Based  on  natural laws that utilize  “Prana” or “Life force” to accelerate natural healing of our body</li>
+                                <li>Practiced  in more than 100 countries of diverse cultural and religious backgrounds and by people of different professions.</li>
+                                <li>It can effectively be applied in all the four aspects of our lives - health, relationship, prosperity and spirituality</li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6">
+                            <div style="padding-bottom: 10px"><img src="images/preview.jpg" id="intro" class="video-img"></div>
+                            <div class="text-right"><a href="/about-pranic-healing.html">Check other videos to know more</a></div>
+                            <button type="button" class="btn btn-info btn-lg hidden" id="intro-button" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+
+
+                        </div>
+                        </div>
                 <div class="clear"></div>
                 </div>
+                <!-- Modal -->
+                            <div id="myModal" class="modal fade" role="dialog">
+                              <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                  <div class="modal-content">
+
+                                        <video width="800" controls controlsList="nodownload">
+                                            <source src="video/Pranic%20Healing%20Principles%20Ep%201%20.mp4" type="video/mp4">
+                                        </video>
+                                  </div>
+                              </div>
+                            </div>
                 <h2 class="h2-design">Pranic Healing can be used to help many issues including :</h2>
                 <div class="clear">
                 	<div class="box1 wow fadeInUp">
@@ -206,205 +237,18 @@ ddsmoothmenu.init({
                 </div>
                 <div class="events_sec wow fadeInDown">
                 	<h2>Upcoming Courses</h2>
-                    <div class="wow fadeInDown">
-                <table id="table2">
-                    <thead>
-                        <tr>
-                            <td>Course</td>
-                            <td>Date</td>
-                            <td>Day</td>
-                            <td>Place</td>
-                            <td>Instructor</td>
-                        </tr>
-                    </thead>
-                    
-                    <tr>
-                        <td>Pranic Body Sculpting, Weight Loss &amp; Face Lift</td>
-                        <td>Mar 24th - 25th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Mathimaaran and Indra Ramamoorthy </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>Mar 24th - 25th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaran </td>
-                    </tr>
-                                        
-                    <tr>
-                        <td>Pranic Body Sculpting, Weight Loss &amp; Face Lift</td>
-                        <td>Mar 27th - 28th </td>
-                        <td>Tue - Wed </td>
-                        <td>NEPAL</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>Mar 31st - Apr 1st </td>
-                        <td>Sat - Sun </td>
-                        <td>Erode</td>
-                        <td>Vairamani Mathimaran </td>
-                    </tr>
-                                
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>Mar 31th - Apr 1st </td>
-                        <td>Sat - Sun </td>
-                        <td>Rajapalayam</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Pranic Crystal Healing</td>
-                        <td>Apr 2nd </td>
-                        <td>Mon </td>
-                        <td>Rajapalayam</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                     <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>Apr 7th - 8th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Venkatachalam</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Advance Pranic Healing</td>
-                        <td>Apr 7th - 8th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>Apr 7th - 8th </td>
-                        <td>Sat - Sun </td>
-                        <td>Salem</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>Apr 14th - 15th </td>
-                        <td>Sat - Sun </td>
-                        <td>Ambattur,Chennai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                        
-                    <tr>
-                        <td> Pranic Crystal Healing</td>
-                        <td>Apr 16th </td>
-                        <td>Mon </td>
-                        <td>Ambattur,Chennai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                                            
-                    <tr>
-                        <td> Achieving Oneness with Higher Soul</td>
-                        <td>Apr 21st - 22nd </td>
-                        <td>Sat - Sun </td>
-                        <td>Kolkata, West Bengal</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Pranic Psychotherapy</td>
-                        <td>Apr 21th - 22nd </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>May 5th - 6th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 12th - 13th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 19th - 20th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 26th - 27th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                                        
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>June 23rd - 24th </td>
-                        <td>Sat - Sun </td>
-                        <td>Aruppukottai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                                            
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>June 30th</td>
-                        <td>Sat </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                     <tr>
-                        <td>Psychic Self Defense</td>
-                        <td>July 1st</td>
-                        <td>Sun </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                        
-                     <tr>
-                        <td> ACPH </td>
-                        <td>July 2nd -4th</td>
-                        <td>Mon-Tue-Wed </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                     <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>July 7th - 8th</td>
-                        <td>Sat - Sun </td>
-                        <td>Madurai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                </table>
-                </div>
+                    <div id="events" class="wow fadeInDown">
+
+                    </div>
                       </div>
             	</div>
             	<div class="right_panel">
             	<h2>Upcoming Events</h2>
 
-               <!--<div class="right_box wow fadeInUp"><a href="upcoming_events.html"><img style='border:1px solid #000000' src="images/img1_thumbnail.jpg" alt=""  /></a></div> 
+               <!--<div class="right_box wow fadeInUp"><a href="upcoming_events.html"><img style='border:1px solid #000000' src="images/img1_thumbnail.jpg" alt=""  /></a></div>
                 <div class="right_box wow fadeInDown"><a href="upcoming_events.html"><img style='border:1px solid #000000' src="images/img2_thumbnail.jpg" alt=""  /></a></div> -->
                 <div class="right_box wow fadeInDown"><a href="Brouchure.zip"><img style='border:1px solid #000000' src="images/img4_thumbnail.jpg" alt=""  /></a></div>
-               
+
                 <div id="highlight-upcoming">
                     <div class="right_box wow fadeInUp"><a href="upcoming_events.html"><img style='border:1px solid #000000' src="images/img5_thumbnail.jpg" alt=""  /></a></div>
                 </div>
@@ -413,7 +257,7 @@ ddsmoothmenu.init({
 
                    <!--
 			<div class="right_box wow fadeInDown"><a href="appeal_nepal.html"><img src="images/nepal_brochure_3_thumbnail.jpg" alt=""  /></a></div>
-                
+
                 <div class="form_bg wow fadeInDown">
                 	<h3><span>Book an appointment</span> NOW !<br />
 					for Trial Healing</h3>
@@ -424,7 +268,7 @@ ddsmoothmenu.init({
                     <div class="clear"><input type="submit" value="submit" class="submit_btn"  /></div>
                     </form>
                 </div>
-                
+
                 <div class="form_bg wow fadeInDown">
                 	<h3><span>Pranic Healing </span> <br>NOW in SILIGURI !
 					</h3>
@@ -485,9 +329,6 @@ ddsmoothmenu.init({
       $("#footer").load("footer.html");
       $(".main-header").load("header.html");
       $("#contact-us").load("contact.html");
-      $('#highlight-upcoming').load("upcoming_courses_highlight.html");
-      
-      
     wow = new WOW(
       {
         animateClass: 'animated',
@@ -504,12 +345,7 @@ ddsmoothmenu.init({
       this.parentNode.insertBefore(section, this);
     };
   </script>
-    <script>
-        commonFunction.applyEffect();
-        
-        
-    </script>
-  
+
 <script type="text/javascript" src="js/jquery.equalheight.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
@@ -524,7 +360,56 @@ if ( $(window).width() > 479) {
      $('.box1 h2').equalHeight();
 	 $('ul.list2').equalHeight();
 }
+    $('.modal').on('click', function() {
+        $('video').trigger('pause');
+    })
+    $('#intro').on('click', function() {
+        $('#intro-button').trigger('click');
+    })
+    $.ajax({
+        url:"https://lightworkers-events.herokuapp.com/public/events",
+        success: function(data) {
+            var eventsJson = { "events" :[]};
+            var eventList = data.split('#@#');
+            for (var event of eventList) {
+                var params = event.replace(/[\r\n]/g, "").split('#');
+                var today = new Date().getTime();
+                var eventDate = new Date(params[0]).getTime();
+                if (event && event.trim != "" && eventDate > today) {
+                    var paramJson = {};
+                    paramJson['event-name'] = params[1];
+                    paramJson['event-date'] = params[2];
+                    paramJson['event-day'] = params[3];
+                    paramJson['event-place'] = params[4];
+                    paramJson['event-trainer'] = params[5];
+                    eventsJson.events.push(paramJson);
+                }
+            }
+            $.get("event-template.html", function(template) {
+                var result = Mustache.render(template, eventsJson);
+                $('#events').html(result);
+                var eventRow = $('.table').find('.table-row .column')
+                $('#search-event').on('keyup', function(){
+                    $('.table-row').removeClass('filtered');
+                    $('.table-row').show();
+                    var keyword = $(this).val().toLowerCase();
+                    $.each(eventRow, function(index, value){
+                        if ($(value).data('key')) {
+                            if ($(value).data('key').toLowerCase().indexOf(keyword) != -1) {
+                                $(value).closest('.table-row').addClass('filtered');
+                            }
+                        }
+                    })
+                    if ($('.table-row').not('.filtered').length > 0) {
+                        $('.table-row').not('.filtered').hide();
+                    }
+                });
 
+            });
+
+        }
+    });
+    template.hightLightCourse();
 });
 </script>
 </body>

@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta name="format-detection" content="telephone=no" />
 <title>GMCKS Lightworkers</title>
 <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -20,6 +20,8 @@
 <script src="js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="js/jquery.meanmenu.js"></script> 
 <script type="text/javascript" src="js/common.js"></script> 
+    <script type="text/javascript" src="js/template.js"></script>  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <script type="text/javascript" >
 jQuery(document).ready(function () {
     jQuery('nav').meanmenu();
@@ -140,90 +142,7 @@ ddsmoothmenu.init({
         	<div class="left_panel">
             	<h1>Upcoming Courses</h1>
             	
-                <div class="wow fadeInDown">
-                <table id="table2">
-                    <thead>
-                        <tr>
-                            <td>Course</td>
-                            <td>Date</td>
-                            <td>Day</td>
-                            <td>Place</td>
-                            <td>Instructor</td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 12th - 13th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Psychic Self-Defence</td>
-                        <td>May 15th</td>
-                        <td>Tue</td>
-                        <td>Chennai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 19th - 20th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Basic Pranic Healing</td>
-                        <td>May 26th - 27th </td>
-                        <td>Sat - Sun </td>
-                        <td>Chennai</td>
-                        <td>Vairamani Mathimaaran </td>
-                    </tr>
-                                        
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>June 23rd - 24th </td>
-                        <td>Sat - Sun </td>
-                        <td>Aruppukottai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                                            
-                    <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>June 30th</td>
-                        <td>Sat </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                     <tr>
-                        <td>Psychic Self Defense</td>
-                        <td>July 1st</td>
-                        <td>Sun </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                                        
-                     <tr>
-                        <td> ACPH </td>
-                        <td>July 2nd -4th</td>
-                        <td>Mon-Tue-Wed </td>
-                        <td>Jharkand</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                     <tr>
-                        <td>Achieving Oneness with Higher Soul</td>
-                        <td>July 7th - 8th</td>
-                        <td>Sat - Sun </td>
-                        <td>Madurai</td>
-                        <td>Mathimaaran </td>
-                    </tr>
-                    
-                </table>
+                <div id="events" class="wow fadeInDown">
                 </div>
 
                 <p>For more information please contact the registration desk: <a href="tel:9962542454">9962542454</a></p>
@@ -276,7 +195,10 @@ ddsmoothmenu.init({
 <!--CONTAINER END -->
 <script src="js/wow.js"></script>
   <script>
-      $("#footer").load("footer.html");       $(".main-header").load("header.html");       $("#contact-us").load("contact.html");   $('#highlight-upcoming').load("upcoming_courses_highlight.html");
+      $("#footer").load("footer.html");
+      $(".main-header").load("header.html");
+      $("#contact-us").load("contact.html");
+      template.hightLightCourse();
     wow = new WOW(
       {
         animateClass: 'animated',
@@ -297,16 +219,57 @@ ddsmoothmenu.init({
 <script type="text/javascript" src="js/jquery.equalheight.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-if ( $(window).width() > 767) {
-     $('.same').equalHeight();
-	 $('.same1').equalHeight();
-	 $('.same2').equalHeight();
-	 $('.same3').equalHeight();
-	 $('.same4').equalHeight();
-}
-if ( $(window).width() > 479) {
-     $('.box1 h2').equalHeight();
-}
+    if ( $(window).width() > 767) {
+         $('.same').equalHeight();
+         $('.same1').equalHeight();
+         $('.same2').equalHeight();
+         $('.same3').equalHeight();
+         $('.same4').equalHeight();
+    }
+    if ( $(window).width() > 479) {
+         $('.box1 h2').equalHeight();
+    }
+    $.ajax({
+        url:"/templates/event.txt",
+        success: function(data) {
+            var eventsJson = { "events" :[]};
+            var eventList = data.split('#@#');
+            for (var event of eventList) {
+                var params = event.replace(/[\r\n]/g, "").split('#');
+                var today = new Date().getTime();
+                var eventDate = new Date(params[0]).getTime();
+                if (event && event.trim != "" && eventDate > today) {
+                    var paramJson = {};
+                    paramJson['event-name'] = params[1];
+                    paramJson['event-date'] = params[2];
+                    paramJson['event-day'] = params[3];
+                    paramJson['event-place'] = params[4];
+                    paramJson['event-trainer'] = params[5];
+                    eventsJson.events.push(paramJson);
+                }
+            }
+            $.get("event-template.html", function(template) {
+                var result = Mustache.render(template, eventsJson);
+                $('#events').html(result);
+                var eventRow = $('.table').find('.table-row .column')
+                $('#search-event').on('keyup', function(){
+                    $('.table-row').removeClass('filtered');
+                    $('.table-row').show();
+                    var keyword = $(this).val().toLowerCase();
+                    $.each(eventRow, function(index, value){
+                        if ($(value).data('key')) {
+                            if ($(value).data('key').toLowerCase().indexOf(keyword) != -1) {
+                                $(value).closest('.table-row').addClass('filtered');
+                            }
+                        }
+                    })
+                    if ($('.table-row').not('.filtered').length > 0) {
+                        $('.table-row').not('.filtered').hide();
+                    }
+                });
+            });
+        }
+    });
 
 });
 </script>
@@ -327,12 +290,5 @@ if ( $(window).width() > 479) {
 </script>
 <!--Accrodian Start-->
 
-<!--Responsible Table Start-->
-     <script>
-        commonFunction.applyEffect();
-    </script>
-    
-    
-<!--Responsible Table End-->
 </body>
 </html>

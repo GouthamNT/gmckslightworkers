@@ -1,0 +1,35 @@
+<div class="wow fadeInDown">
+    <div class="table-search">
+    <div class="row">
+        <div class="input-group">
+            <span class="input-group-addon  icon-style"><i class="glyphicon glyphicon-search"></i></span>
+            <input id="search-event" type="text" class="form-control form-theme" name="Filter" placeholder="Filter">
+          </div>
+        </div>
+        </div>
+<div class="table">
+    
+    <div class="table-head">
+        
+        <div class="row">
+            <div class="column" data-label="Course">Course</div>
+            <div class="column" data-label="Date">Date</div>
+            <div class="column" data-label="Day">Day</div>
+            <div class="column" data-label="Place">Place</div>
+            <div class="column" data-label="Instructor">Instructor</div>
+        </div>
+    </div>
+    <tbody>
+	{{#events}}
+    <div class="row table-row">
+        <div class="column" data-label="Course" data-key="{{event-name}}">{{event-name}}</div>
+        <div class="column" data-label="Date">{{event-date}}</div>
+        <div class="column" data-label="Day">{{event-day}}</div>
+        <div class="column" data-label="Place" data-key="{{event-place}}">{{{event-place}}}</div>
+        <div class="column" data-label="Instructor" data-key="{{event-trainer}}">{{event-trainer}}</div>
+    </div>
+	{{/events}}
+
+</tbody>
+    </div>
+</div>

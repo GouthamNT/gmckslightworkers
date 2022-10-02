@@ -1,82 +1,98 @@
-.table{
-	display:table;	/* Defines a Table */
-	font-family:'open_sansregular';
-	font-size:14px;
-	border-bottom:1px solid #e9c745;
-	color:#6c6c6c;
-	margin:10px 0px;text-align:center;width:100%;margin-bottom:24px;
-}
-.table-head{
-	 display: table-header-group; /* Defines a table header group */ background-color:#e9c745;
-}
-.table-head .column{ /* Column inside the table-head */
-	
-	color:#7d7d7d;
-	border-right:none; font:normal 15px 'open_sansregular';color:#ffffff;text-transform:uppercase;
-}
-.table-head .column:hover{ /* Column hover inside the table-head */
-	
-}
-.row{
-	display:table-row; /* Defines a table row */ 
-}
-.row .column:nth-child(1){ /* First column in a row */
-	border-left:1px solid #d3d3d3;text-align:left;
-}
-.row:last-child .column{  /* column in a last row */
-	border-bottom:none;
-}
-.column{
-	display:table-cell; /* Defines a table cell */
-	padding:10px 10px;
-	border-right:1px solid #e9c745;text-align:left;border-bottom:1px solid #e9c745;
-}
-.column:hover{
-	
-}
-/* Responsive table */
-@media all and (max-width: 1023px){
-	.table,
-	.row,
-	.column,
-	.column:before{
-		display:block;	/* Converts a table, table row, table column and table column:before into a block element */ 
-	}
-	
-	
-	.table,
-	.row .column:last-child{
-		border-bottom:none;
-	}
-	.table-head{
-		position:absolute;	/* Hides table head but not using display none */
-		top:-1000em;
-		left:-1000em;
-	}
-	.row{
-		border:1px solid #e9c745;
-		display:inline-block;
-		margin:20px 0;width:90%;
-	}
-	.row .column:nth-child(1){ /* first column of the row */
-		border-left:none;
-	}
-	.row .column:last-child{ /* last column of the row */
-		border-right:none;
-	}
-	.row:last-child .column,
-	.column{ /* Column in the last row and column */
-		border-bottom:1px solid #d3d3d3;
-	}
-	.column:before{ /* prints the value of data-label attribute before the column data */
-		font-weight:bold;
-		
-		font-size:12px;
-		content:" "attr(data-label)" //";	/* call the attribute value of data-label and adds a string // */
-	}
-	
-	.column{border-right:none;}
-	.row .column:nth-child(1){ /* First column in a row */
-	
-}
+.table{
+	display:table;	/* Defines a Table */
+	font-family:'open_sansregular';
+	font-size:14px;
+	border-bottom:1px solid #e9c745;
+	color:#6c6c6c;
+/*	margin:10px 0px;*/
+    text-align:center;width:100%;margin-bottom:24px;
+}
+.table-head{
+	 display: table-header-group; /* Defines a table header group */ background-color:#e9c745;
+}
+.table-head .column{ /* Column inside the table-head */
+	
+	color:#7d7d7d;
+	border-right:none; font:normal 15px 'open_sansregular';color:#ffffff;text-transform:uppercase;
+}
+.table-head .column:hover{ /* Column hover inside the table-head */
+	
+}
+
+.table-search {
+    background: #e9c745;
+    padding: 10px;
+}
+.row{
+	display:table-row; /* Defines a table row */ 
+}
+.row .column:nth-child(1){ /* First column in a row */
+	border-left:1px solid #d3d3d3;text-align:left;
+}
+.row:last-child .column{  /* column in a last row */
+	border-bottom:none;
+}
+.column{
+	display:table-cell; /* Defines a table cell */
+	padding:10px 10px;
+	border-right:1px solid #e9c745;text-align:left;border-bottom:1px solid #e9c745;
+}
+.column:hover{
+	
+}
+
+.icon-style {
+    background: #b28e05 !important;
+    color: white;
+}
+
+.form-theme {
+    background: #f9efca;
+}
+
+/* Responsive table */
+@media all and (max-width: 1023px){
+	.table,
+	.row,
+	.column,
+	.column:before{
+		display:block;	/* Converts a table, table row, table column and table column:before into a block element */ 
+	}
+	
+	
+	.table,
+	.row .column:last-child{
+		border-bottom:none;
+	}
+	.table-head{
+		position:absolute;	/* Hides table head but not using display none */
+		top:-1000em;
+		left:-1000em;
+	}
+	.row{
+		border:1px solid #e9c745;
+		display:inline-block;
+		margin:20px 0;width:90%;
+	}
+	.row .column:nth-child(1){ /* first column of the row */
+		border-left:none;
+	}
+	.row .column:last-child{ /* last column of the row */
+		border-right:none;
+	}
+	.row:last-child .column,
+	.column{ /* Column in the last row and column */
+		border-bottom:1px solid #d3d3d3;
+	}
+	.column:before{ /* prints the value of data-label attribute before the column data */
+		font-weight:bold;
+		
+		font-size:12px;
+		content:" "attr(data-label)" //";	/* call the attribute value of data-label and adds a string // */
+	}
+	
+	.column{border-right:none;}
+	.row .column:nth-child(1){ /* First column in a row */
+	
+}
 }
