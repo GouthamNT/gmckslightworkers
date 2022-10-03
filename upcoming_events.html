@@ -228,7 +228,7 @@ if ( $(window).width() > 479) {
                 var today = new Date().getTime();
                 var eventDate = new Date(event.startDate).getTime();
 
-                if (event && event.trim != "" && eventDate > today) {
+                if (event && eventDate > today) {
                     var paramJson = {};
 
                     var paramJson = {}
@@ -236,7 +236,7 @@ if ( $(window).width() > 479) {
                         eventRow = {"event-row":[]}
                     }
                     paramJson['event-name'] = event.eventName;
-                    paramJson['event-img'] = event.brochureFile;
+                    paramJson['event-img'] = event.brochureFilePath;
                     eventRow["event-row"].push(paramJson);
                     if (count % 2 == 0) {
                         eventsJson.events.push(eventRow);

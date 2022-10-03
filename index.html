@@ -394,18 +394,18 @@
                         ? "th"
                         : ["st", "nd", "rd"][day % 10 - 1];
                     }
+                    const formatter = new Intl.DateTimeFormat('gb', { month: 'short' });
                     for (var event of eventList) {
                         var today = new Date().getTime();
                         var eventDate = new Date(event.startDate).getTime();
-                        const formatter = new Intl.DateTimeFormat('in', { month: 'short' });
                         if (event && event.trim != "" && eventDate > today) {
                             let startDate = new Date(event.startDate);
                             let endDate = new Date(event.endDate);
-                            let eventDate = `${formatter.format(startDate).toLocaleUpperCase()} ${startDate.getDate()}${getSuffix(startDate.getDate())} - ${formatter.format(endDate)} ${endDate.getDate()}${getSuffix(endDate.getDate())}`
+                            let eventDate = `${formatter.format(startDate)} ${startDate.getDate()}${getSuffix(startDate.getDate())}${startDate.getTime() !== endDate.getTime()?`- ${formatter.format(endDate)} ${endDate.getDate()}${getSuffix(endDate.getDate())}`:``} `
                             var paramJson = {};
                             paramJson['event-name'] = event.eventName;
                             paramJson['event-date'] = eventDate;
-                            paramJson['event-day'] = `${weekDays[startDate.getDay()]} - ${weekDays[endDate.getDay()]}`;
+                            paramJson['event-day'] = `${weekDays[startDate.getDay()]}${startDate.getTime() !== endDate.getTime()?` - ${weekDays[endDate.getDay()]}`:``}`;
                             paramJson['event-place'] = event.location;
                             paramJson['event-trainer'] = event.instructorName;
                             eventsJson.events.push(paramJson);

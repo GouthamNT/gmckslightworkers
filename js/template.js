@@ -2,17 +2,16 @@ var template = (function() {
     return {
         hightLightCourse: function() {
             $.ajax({
-                url:"/templates/poster.txt",
+                url:"https://light-workers-events-service.herokuapp.com/public/events",
                 success: function(data) {
                     var eventsJson = { "events" :[]};
-                    var eventList = data.split('#@#');
+                    var eventList = data;
                     for (var event of eventList) {
-                        var params = event.replace(/[\r\n]/g, "").split('#');
                         var today = new Date().getTime();
-                        var eventDate = new Date(params[0]).getTime();
-                        if (event && event.trim != "" && eventDate > today) {
+                        var eventDate = new Date(event.startDate).getTime();
+                        if (event && eventDate > today) {
                             var paramJson = {};
-                            paramJson['event-img'] = params[2];
+                            paramJson['event-img'] = event.brochureFilePath;
                             eventsJson.events.push(paramJson);
                         }
                     }
